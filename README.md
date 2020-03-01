@@ -1,4 +1,4 @@
-<h1> [Teste Estágio] Finalizado </h1>
+<h1> Prototipo RPG </h1>
 
 
 *Considerações/Configurações inciais
