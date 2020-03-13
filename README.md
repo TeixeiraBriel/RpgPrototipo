@@ -1,4 +1,19 @@
-<h1> Prototipo RPG </h1>
+# Sobre
+
+RPG é um jogo que tenho desenvolvido com o intuito de criar uma plataforma de treino/simulação de como seria jogar um rpg de mesa, onde há camadas de jogadores, estes são. Mestre e jogador. O Mestres define sequencias para as historias e jogadores define ações, que catalizam outros processos para historia.
+
+# Canais:
+
+Ambiente definitivo: ---
+Ambiente de teste: Existe!
+
+
+# Detalhes:
+
+Repositorio destinado para guardar ultima versão do RPG online.
+Neste repositorio ficam armazenadas a ultima versã online.
+
+# Configurações
 
 
 *Considerações/Configurações inciais
