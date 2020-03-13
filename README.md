@@ -5,6 +5,7 @@ RPG é um jogo que tenho desenvolvido com o intuito de criar uma plataforma de t
 # Canais:
 
 Ambiente definitivo: ---
+
 Ambiente de teste: Existe!
 
 
