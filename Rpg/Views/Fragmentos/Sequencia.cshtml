@@ -1,5 +1,6 @@
 ﻿@model fragmentoHistoria
 @{
+    ViewData["PassoAnterior"] = Model.IdFragmentoParent;
     ViewData["TituloPasso"] = Model.TituloFragmento;
     ViewData["TextoPasso"] = Model.TextoFragmento;
 }
@@ -14,3 +15,6 @@
         </button>
     }
 }
+<button type="button" class="btn btn-outline-secondary">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Fragmentos" asp-action="Novo" asp-route-id="@Model.IdFragmentoHistoria">Novo</a>
+</button>

@@ -39,12 +39,10 @@ namespace Rpg.Controllers
         {
             fragmentoHistoria fragmento = new fragmentoHistoria { IdFragmentoHistoria = id };
 
-            //Buscar do banco pelo Id fragmento e preencher devidos campos
-            fragmentoHistoria resposta = new fragmentoHistoria();//consulta no banco aqui
+            fragmentoHistoria resposta = coletaApi(id);
 
             fragmento.TituloFragmento = resposta.TituloFragmento;
-            fragmento.TextoFragmento = resposta.TextoFragmento;
-            //Pegar lista de segmentos e adicionar na lista                
+            fragmento.TextoFragmento = resposta.TextoFragmento;        
             fragmento.Segmentos = new List<fragmentoHistoria>();
 
             foreach (var segmento in resposta.Segmentos)
@@ -53,6 +51,25 @@ namespace Rpg.Controllers
             }
 
             return View(fragmento);
+        }
+
+        [Route("Fragmentos/Novo/{id}")]
+        public IActionResult Novo([FromRoute] int id)
+        {
+            fragmentoHistoria fragmento = new fragmentoHistoria { IdFragmentoHistoria = id };
+            fragmento.obtemInfos(id);
+
+            return View(fragmento);
+        }
+
+        public fragmentoHistoria coletaApi(int id)
+        {
+            fragmentoHistoria resposta = new fragmentoHistoria { IdFragmentoHistoria = id };
+            resposta.obtemInfos(id);
+            resposta.obtemSegmentos(id);
+
+
+            return resposta;
         }
     }
 }
